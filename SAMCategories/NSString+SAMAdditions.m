@@ -9,6 +9,9 @@
 #import "NSString+SAMAdditions.h"
 #import "NSData+SAMAdditions.h"
 
+#import <CommonCrypto/CommonHMAC.h>
+
+
 @interface NSString (SAMPrivateAdditions)
 - (NSData *)sam_prehashData;
 @end

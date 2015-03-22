@@ -6,8 +6,7 @@
 //  Copyright (c) 2009-2014 Sam Soffes. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <CommonCrypto/CommonHMAC.h>
+@import Foundation;
 
 /**
  Provides extensions to `NSString` for various common tasks.
@@ -88,14 +87,17 @@
  */
 - (NSString *)sam_SHA512Digest;
 
-/**
+
+
+/*
  Returns a string of the HMAC digest of the receiver.
  
  @param key The key to use in the HMAC digest.
  @param algorithm The algorithm to use for the HMAC digest.
  @return The string of the HMAC digest of the receiver.
+ @note REMOVED to Compile as Framework in Swift
  */
-- (NSString *)sam_HMACDigestWithKey:(NSString *)key algorithm:(CCHmacAlgorithm)algorithm;
+//- (NSString *)sam_HMACDigestWithKey:(NSString *)key algorithm:(CCHmacAlgorithm)algorithm;
 
 
 ///-------------------------
