@@ -91,11 +91,13 @@
  */
 - (id)sam_firstSuperviewOfClass:(Class)superviewClass;
 
+
 /**
  Returns the true center of the view, regardless of orientation
  */
+#if !defined(SAM_APP_EXTENSIONS)
  - (CGPoint)sam_trueCenter;
-
+#endif
 
 ///------------------
 /// @name Auto Layout

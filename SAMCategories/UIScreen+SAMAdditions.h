@@ -25,7 +25,9 @@
  
  @see boundsForOrientation:
  */
+#if !defined(SAM_APP_EXTENSIONS)
 - (CGRect)sam_currentBounds;
+#endif
 
 /**
  Returns the bounds of the screen for a given device orientation. `UIScreen`'s `bounds` method always returns the bounds
@@ -37,8 +39,9 @@
  
  @see currentBounds
  */
+#if !defined(SAM_APP_EXTENSIONS)
 - (CGRect)sam_boundsForOrientation:(UIInterfaceOrientation)orientation;
-
+#endif
 
 ///------------------------
 /// @name Screen Attributes
