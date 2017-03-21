@@ -10,6 +10,7 @@
 
 @implementation UIViewController (SAMAdditions)
 
+#if !defined(SAM_APP_EXTENSIONS)
 - (void)sam_displayError:(NSError *)error {
 	if (!error) {
 		return;
@@ -17,6 +18,7 @@
 	
 	[self sam_displayErrorString:[error localizedDescription]];
 }
+#endif
 
 #if !defined(SAM_APP_EXTENSIONS)
 - (void)sam_displayErrorString:(NSString *)string {

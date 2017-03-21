@@ -23,7 +23,9 @@
  
  @param error Error to present.
  */
+#if !defined(SAM_APP_EXTENSIONS)
 - (void)sam_displayError:(NSError *)error;
+#endif
 
 /**
  Present a `UIAlertView` with an error messagae.
