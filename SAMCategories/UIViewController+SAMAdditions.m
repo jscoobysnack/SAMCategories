@@ -18,7 +18,7 @@
 	[self sam_displayErrorString:[error localizedDescription]];
 }
 
-
+#if !defined(SAM_APP_EXTENSIONS)
 - (void)sam_displayErrorString:(NSString *)string {
 	if (!string || [string length] < 1) {
 		return;
@@ -27,6 +27,7 @@
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:string delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 	[alert show];
 }
+#endif
 
 
 - (UIViewController *)sam_firstParentViewControllerOfClass:(Class)klass {

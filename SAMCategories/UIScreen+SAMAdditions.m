@@ -11,11 +11,13 @@
 
 @implementation UIScreen (SAMAdditions)
 
+#if !defined(SAM_APP_EXTENSIONS)
 - (CGRect)sam_currentBounds {
 	return [self sam_boundsForOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
 }
+#endif
 
-
+#if !defined(SAM_APP_EXTENSIONS)
 - (CGRect)sam_boundsForOrientation:(UIInterfaceOrientation)orientation {
 	CGRect bounds = [self bounds];
 
@@ -27,6 +29,7 @@
 	}
 	return bounds;
 }
+#endif
 
 
 - (BOOL)sam_isRetina {

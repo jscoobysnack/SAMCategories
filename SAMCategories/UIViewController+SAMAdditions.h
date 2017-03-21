@@ -30,7 +30,9 @@
  
  @param string Error string to present.
  */
+#if !defined(SAM_APP_EXTENSIONS)
 - (void)sam_displayErrorString:(NSString *)string;
+#endif
 
 /**
  Returns the first parent view controller of a given class.
