@@ -19,15 +19,6 @@
 ///---------------------------
 
 /**
- Returns the bounds of the screen for the current device orientation.
- 
- @return A rect indicating the bounds of the screen.
- 
- @see boundsForOrientation:
- */
-- (CGRect)sam_currentBounds;
-
-/**
  Returns the bounds of the screen for a given device orientation. `UIScreen`'s `bounds` method always returns the bounds
  of the screen of it in the portrait orientation.
  

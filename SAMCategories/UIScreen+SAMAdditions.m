@@ -11,10 +11,6 @@
 
 @implementation UIScreen (SAMAdditions)
 
-- (CGRect)sam_currentBounds {
-	return [self sam_boundsForOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
-}
-
 
 - (CGRect)sam_boundsForOrientation:(UIInterfaceOrientation)orientation {
 	CGRect bounds = [self bounds];

@@ -24,8 +24,8 @@
 		return;
 	}
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:string delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-	[alert show];
+	UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Error" message:string preferredStyle:UIAlertControllerStyleAlert];
+	[self presentViewController:alert animated:YES completion:nil];
 }
 
 
